@@ -1,0 +1,25 @@
+version: "3.4"
+
+networks:
+    default:
+        external:
+            name: dev
+
+services:
+    app:
+        build: .
+        image: qman:1.0.0
+        container_name: qman-container
+        ports:
+            - 4040:4000
+        environment: 
+            DB_HOST: 'localhost'
+            DB_USERNAME: 'root'
+            DB_PASSWORD: 'password'
+            DB_NAME: 'qman'
+            DB_PORT: '3306'
+            QMAN_SECRET: 'qwertyuiopasdfghjklzxcvbnm123456789'
+            QMAN_DEBUG: 0
+
+
+            

@@ -1,0 +1,1 @@
+QMAN is a simple message queue framework with queue management.
